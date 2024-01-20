@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #22d3ee;
+}
+
+body {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  /* background: #181818; */
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  width: 100%;
+  height: 100%;
+  background: #ffffff31;
+  backdrop-filter: blur(0.25rem);
+  border-bottom: 1px solid #ffffff6c;
+}
+
+.header .nav .logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: black;
+}
+
+.header .nav .follow {
+  padding: 0.5rem 1.25rem;
+  background: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  border-radius: 100vw;
+}
+
+.branding {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  background: white;
+  z-index: 10;
+  animation-name: blowup;
+  animation-timeline: view();
+  animation-range-start: contain 0vh;
+  animation-range-end: contain 200vh;
+  animation-fill-mode: forwards;
+}
+
+.branding .branding-title {
+  font-size: 8rem;
+}
+
+.content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  background: #37333a;
+}
+
+.content h1 {
+  width: 20rem;
+  font-size: 1rem;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(15%);
+  animation-name: contentin;
+  animation-timeline: view();
+  animation-range-start: contain 120vh;
+  animation-range-end: contain 200vh;
+  animation-fill-mode: forwards;
+}
+
+.timeline {
+  width: 100%;
+  height: 300dvh;
+  background: rebeccapurple;
+}
+
+@keyframes blowup {
+  0% {
+    color: #8d8d8d;
+    opacity: 1;
+    transform: perspective(500px) translateZ(0vh);
+  }
+  5% {
+    color: black;
+  }
+  100% {
+    opacity: 0;
+    transform: perspective(500px) translateZ(99vh);
+  }
+}
+
+@keyframes contentin {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
