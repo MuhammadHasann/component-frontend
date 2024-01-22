@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Neue Montreal";
+}
+
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #181818;
+  z-index: -100;
+}
+
+button {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  /* padding: 16px 48px; */
+  /* min-height: 58px; */
+  width: 200px;
+  height: 60px;
+  background-color: #181818;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  border: 1px solid #fff;
+  border-radius: 9999px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  color: #181818;
+  cursor: none;
+}
+
+button span {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: max-content;
+  animation: started 0.3s cubic-bezier(0.29, 0.66, 0.18, 0.81) forwards;
+}
+
+button:hover span {
+  animation: started2 0.3s cubic-bezier(0.29, 0.66, 0.18, 0.81) forwards;
+}
+
+button::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 0px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+button:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+button::after {
+  pointer-events: none;
+  content: "\1F86A";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  padding: 4px;
+  width: 20px;
+  height: 20px;
+  background-color: #181818;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+button:hover::after {
+  opacity: 1;
+}
+
+@keyframes started {
+  0% {
+    left: 105%;
+    transform: translate(0%, -50%);
+  }
+
+  100% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes started2 {
+  0% {
+    left: 105%;
+    transform: translate(0%, -50%);
+  }
+
+  100% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
