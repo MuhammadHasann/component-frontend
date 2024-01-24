@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Neue Montreal";
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #181818;
+}
+
+.card {
+  --lime-500: #bdd910;
+  --violet-700: #8a07b8;
+
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+
+  padding: 1rem;
+  width: 14rem;
+  height: auto;
+  min-height: 16rem;
+  background-color: var(--lime-500);
+
+  border-radius: 0.5rem;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 7rem;
+  right: 2rem;
+
+  width: 1.25rem;
+  aspect-ratio: 1 / 1;
+  background-color: var(--violet-700);
+
+  border-radius: 9999px;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 8.75rem;
+  right: -0.5rem;
+
+  width: 3rem;
+  aspect-ratio: 1 / 1;
+  background-color: var(--violet-700);
+
+  border-radius: 9999px;
+}
+
+.card .carousel {
+  position: absolute;
+  left: 0;
+
+  animation: carousel 10s linear var(--carousel_direction, normal) infinite;
+}
+
+.card .carousel[data-direction="right"] {
+  --carousel_direction: reverse;
+}
+.card .carousel[data-position="top"] {
+  top: 0.75rem;
+}
+.card .carousel[data-position="bottom"] {
+  bottom: 0.75rem;
+}
+
+.card .carousel .carousel__text {
+  font-size: 0.75rem;
+  color: black;
+  text-wrap: nowrap;
+}
+
+@keyframes carousel {
+  to {
+    transform: translate(-50%);
+  }
+}
+
+.card .image {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.25rem;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+  aspect-ratio: 1 / 1;
+  background-color: black;
+
+  border-radius: 0.25rem;
+}
+
+.card .image svg {
+  width: 1.5rem;
+  fill: white;
+}
+
+.card .title {
+  position: relative;
+  z-index: 10;
+
+  font-size: 1.25rem;
+  color: black;
+  font-weight: bold;
+}
+
+.card .paragraph {
+  position: relative;
+  z-index: 10;
+
+  padding-right: 0.25rem;
+
+  font-size: 0.75rem;
+  color: black;
+}
