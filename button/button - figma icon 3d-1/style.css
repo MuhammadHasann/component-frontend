@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Neue Montreal";
+}
+
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: #181818; */
+  z-index: -100;
+}
+
+.button {
+  overflow: hidden;
+  cursor: pointer;
+
+  position: relative;
+
+  width: 7rem;
+  height: 7rem;
+  background-color: hsla(0, 100%, 69%, 1);
+  background-image: radial-gradient(at 14% 46%, hsla(0, 100%, 74%, 1) 0px, transparent 50%), radial-gradient(at 90% 52%, hsla(266, 100%, 65%, 1) 0px, transparent 50%), radial-gradient(at 96% 14%, hsla(0, 99%, 87%, 1) 0px, transparent 50%),
+    radial-gradient(at 46% 61%, hsla(266, 100%, 65%, 1) 0px, transparent 50%), radial-gradient(at 0% 89%, hsla(266, 100%, 65%, 1) 0px, transparent 50%), radial-gradient(at 80% 60%, hsla(202, 98%, 47%, 1) 0px, transparent 50%),
+    radial-gradient(at 40% 97%, hsla(178, 65%, 64%, 1) 0px, transparent 50%), radial-gradient(at 100% 100%, hsla(145, 87%, 55%, 1) 0px, transparent 50%), radial-gradient(at 3% 2%, hsla(0, 100%, 76%, 1) 0px, transparent 50%);
+
+  font-size: 1rem;
+  color: white;
+
+  border: none;
+  border-radius: 1.25rem;
+  box-shadow: inset -1px 0px 4px 2px #ffffff91;
+
+  transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 6rem;
+  height: 6rem;
+  background-color: hsla(0, 100%, 69%, 1);
+  background-image: radial-gradient(at 14% 46%, hsla(0, 100%, 74%, 1) 0px, transparent 50%), radial-gradient(at 92% 53%, hsla(266, 100%, 65%, 1) 0px, transparent 50%), radial-gradient(at 96% 14%, hsla(0, 99%, 87%, 1) 0px, transparent 50%),
+    radial-gradient(at 44% 66%, hsla(266, 100%, 65%, 1) 0px, transparent 50%), radial-gradient(at 0% 87%, hsla(266, 100%, 65%, 1) 0px, transparent 50%), radial-gradient(at 89% 79%, hsla(202, 98%, 47%, 1) 0px, transparent 50%),
+    radial-gradient(at 49% 97%, hsla(178, 65%, 64%, 1) 0px, transparent 50%), radial-gradient(at 3% 2%, hsla(0, 100%, 76%, 1) 0px, transparent 50%), radial-gradient(at 100% 100%, hsla(145, 87%, 55%, 1) 0px, transparent 50%);
+
+  border-radius: 1rem;
+  box-shadow: -1px 0px 4px 1px #0000007e, inset -1px 0px 4px 2px #ffffff91;
+}
+
+.button::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -25%;
+
+  width: 1rem;
+  height: 100%;
+  background-color: #ffffff8e;
+
+  transform: skew(-15deg);
+  transition: all 0s linear;
+}
+
+.button:hover::after {
+  left: 115%;
+
+  transition: all 1s cubic-bezier(1, 0, 0, 1) 0.3s;
+}
+
+.button .figma-logo {
+  position: relative;
+  z-index: 10;
+
+  width: 4.5rem;
+  height: 4.5rem;
+  fill: white;
+}
