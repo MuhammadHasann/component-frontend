@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Neue Montreal";
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #181818;
+}
+
+.loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.box-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  border: 5px solid #FFF;
+  box-shadow: 2px 2px 3px #18181870;
+  animation: loaderBox-1 10s ease infinite;
+}
+
+@keyframes loaderBox-1 {
+  0% {
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+  4.2% {
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 45px;
+  }
+  8.4% {
+    top: 0;
+    left: 55%;
+    width: 45px;
+    height: 45px;
+  }
+  25.2% {
+    top: 0;
+    left: 55%;
+    width: 45px;
+    height: 45px;
+  }
+  29.4% {
+    top: 0;
+    left: 55%;
+    width: 45px;
+    height: 100px;
+  }
+  33.6% {
+    top: 55%;
+    left: 55%;
+    width: 45px;
+    height: 45px;
+  }
+  50.4% {
+    top: 55%;
+    left: 55%;
+    width: 45px;
+    height: 45px;
+  }
+  54.6% {
+    top: 55%;
+    left: 0;
+    width: 100px;
+    height: 45px;
+  }
+  58.8% {
+    top: 55%;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+  75.6% {
+    top: 55%;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+  79.8% {
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 100px;
+  }
+  84% {
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.box-2 {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  border: 5px solid #FFF;
+  box-shadow: 2px 2px 3px #18181870;
+  animation: loaderBox-2 10s ease infinite;
+}
+
+@keyframes loaderBox-2 {
+  0% {
+    top: 55%;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+  8.4% {
+    top: 55%;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+  12.6% {
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 100px;
+  }
+  16.8% {
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+  33.6% {
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+  37.8% {
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 45px;
+  }
+  42% {
+    top: 0;
+    left: 55%;
+    width: 45px;
+    height: 45px;
+  }
+  58.8% {
+    top: 0;
+    left: 55%;
+    width: 45px;
+    height: 45px;
+  }
+  63% {
+    top: 0;
+    left: 55%;
+    width: 45px;
+    height: 100px;
+  }
+  67.2% {
+    top: 55%;
+    left: 55%;
+    width: 45px;
+    height: 45px;
+  }
+  84% {
+    top: 55%;
+    left: 55%;
+    width: 45px;
+    height: 45px;
+  }
+  88.2% {
+    top: 55%;
+    left: 0;
+    width: 100px;
+    height: 45px;
+  }
+  92.4% {
+    top: 55%;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.box-3 {
+  position: absolute;
+  top: 55%;
+  left: 55%;
+  width: 45px;
+  height: 45px;
+  border: 5px solid #FFF;
+  box-shadow: 2px 2px 3px #18181870;
+  animation: loaderBox-3 10s ease infinite;
+}
+
+@keyframes loaderBox-3 {
+  0% {
+    top: 55%;
+    left: 55%;
+    width: 45px;
+    height: 45px;
+  }
+  16.8% {
+    top: 55%;
+    left: 55%;
+    width: 45px;
+    height: 45px;
+  }
+  21% {
+    top: 55%;
+    left: 0;
+    width: 100px;
+    height: 45px;
+  }
+  25.2% {
+    top: 55%;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+  42% {
+    top: 55%;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+  46.2% {
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 100px;
+  }
+  50.4% {
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+  67.2% {
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+  71.4% {
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 45px;
+  }
+  75.6% {
+    top: 0;
+    left: 55%;
+    width: 45px;
+    height: 45px;
+  }
+  92.4% {
+    top: 0;
+    left: 55%;
+    width: 45px;
+    height: 45px;
+  }
+  96.6% {
+    top: 0;
+    left: 55%;
+    width: 45px;
+    height: 100px;
+  }
+  100% {
+    top: 55%;
+    left: 55%;
+    width: 45px;
+    height: 45px;
+  }
+}
