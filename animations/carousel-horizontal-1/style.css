@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.blank_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 24rem;
+  background-color: hsl(0, 0%, 85%);
+}
+
+.blank_section .blank_section__text {
+  cursor: default;
+
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: black;
+}
+
+.carousel_section {
+  position: relative;
+
+  width: 100%;
+  height: 500dvh;
+  background-color: hsl(25, 5%, 45%);
+}
+
+.carousel_section .carousel_container {
+  overflow: clip;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 100dvh;
+  background-color: hsl(0, 0%, 13%);
+}
+
+.carousel_section .carousel_container .carousel_wrapped {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 4rem 10rem;
+  height: 100%;
+
+  animation-name: carouselWrapped;
+  animation-timeline: view();
+  animation-range: contain;
+  animation-fill-mode: forwards;
+}
+
+@keyframes carouselWrapped {
+  to {
+    transform: translateX(calc(-100% + 100vw));
+  }
+}
+
+.carousel_section .carousel__item-one {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  width: 64rem;
+  height: 100%;
+}
+
+.carousel_section .carousel__item-one .text_container,
+.carousel_section .carousel__item-five .text_container {
+  position: relative;
+}
+
+.carousel_section .carousel__item-one .text_container h1,
+.carousel_section .carousel__item-three .text_container h1,
+.carousel_section .carousel__item-five .text_container h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: white;
+  line-height: 2.75rem;
+  text-indent: 15rem;
+  text-transform: uppercase;
+}
+
+.carousel_section .carousel__item-one .text_container span,
+.carousel_section .carousel__item-three .text_container span,
+.carousel_section .carousel__item-five .text_container span,
+.carousel_section .carousel__item-five .content_container .content-text_container span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+
+.carousel_section .carousel__item-one .text_container span:nth-child(2),
+.carousel_section .carousel__item-three .text_container span:nth-child(2),
+.carousel_section .carousel__item-five .text_container span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel_section .carousel__item-one img {
+  width: 25rem;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel_section .carousel__item-two,
+.carousel_section .carousel__item-four,
+.carousel_section .carousel__item-six {
+  width: 32rem;
+  height: 100%;
+}
+
+.carousel_section .carousel__item-two img,
+.carousel_section .carousel__item-four img,
+.carousel_section .carousel__item-six img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.carousel_section .carousel__item-three {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+
+  width: 56rem;
+  height: 100%;
+}
+
+.carousel_section .carousel__item-three .text_container {
+  position: relative;
+  height: 100%;
+}
+
+.carousel_section .carousel__item-three .text_container p,
+.carousel_section .carousel__item-five .content_container .content-text_container p {
+  font-size: 1rem;
+  color: white;
+}
+
+.carousel_section .carousel__item-three .text_container span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel_section .carousel__item-three img {
+  width: 24rem;
+  height: 80%;
+
+  object-fit: cover;
+  object-position: right;
+}
+
+.carousel_section .carousel__item-five {
+  display: flex;
+  flex-direction: column;
+
+  width: 68rem;
+  height: 100%;
+}
+
+.carousel_section .carousel__item-five .content_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  height: 100%;
+}
+
+.carousel_section .carousel__item-five .content_container img {
+  width: 30rem;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.carousel_section .carousel__item-five .content_container .content-text_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
