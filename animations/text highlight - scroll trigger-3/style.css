@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: hsl(0, 0%, 13%);
+  --light: hsl(0, 0%, 85%);
+  --button: hsl(188, 86%, 53%);
+  --paragraph: hsl(218, 11%, 65%);
+  --primary: hsl(0, 0%, 45%);
+  --blue-500: hsla(221, 83%, 53%, 0.75);
+}
+
+body {
+  --dark: hsl(0, 0%, 9%);
+
+  position: relative;
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+}
+
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 5rem;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 100%, 0.2);
+
+  backdrop-filter: blur(0.25rem);
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.4);
+}
+
+.header .nav .logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: black;
+}
+
+.header .nav .follow {
+  padding: 0.5rem 1.25rem;
+  background: var(--button);
+
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+
+  border-radius: 100vw;
+}
+
+.text-highlight_section {
+  width: 100%;
+  background-color: var(--dark);
+}
+
+.text-highlight_section .container_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-inline: 10rem;
+  width: 100%;
+  height: 100dvh;
+}
+
+.container_title h1 {
+  font-size: 7rem;
+  font-weight: bold;
+  color: var(--light);
+  line-height: 7rem;
+  text-transform: capitalize;
+}
+
+.text-highlight_section .container_paragraph {
+  padding: 5rem 10rem;
+  width: 100%;
+}
+
+.container_paragraph p {
+  margin-bottom: 1.25rem;
+
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: var(--paragraph);
+}
+
+.container_paragraph p span {
+  background-image: linear-gradient(90deg, var(--blue-500), var(--blue-500));
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+}
+
+@supports (animation-timeline: view()) {
+  .container_paragraph p {
+    animation: trigger steps(1) both;
+    animation-timeline: view();
+    animation-range: entry;
+  }
+
+  .container_paragraph p span {
+    animation: highlight-back 1s cubic-bezier(0.86, -0.01, 0.21, 0.99) forwards;
+  }
+
+  @container style(--animate: true) {
+    .container_paragraph p span {
+      animation: highlight 1s cubic-bezier(0.86, -0.01, 0.21, 0.99) forwards;
+    }
+  }
+}
+
+@keyframes trigger {
+  to {
+    --animate: true;
+  }
+}
+
+@keyframes highlight {
+  to {
+    background-size: 100% 100%;
+
+    color: var(--light);
+  }
+}
+
+@keyframes highlight-back {
+  from {
+    background-size: 100% 100%;
+
+    color: var(--light);
+  }
+  to {
+    background-size: 0% 100%;
+
+    color: var(--paragraph);
+  }
+}
