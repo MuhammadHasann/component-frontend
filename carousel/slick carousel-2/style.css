@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 600px;
+  box-shadow: 0 30px 50px #dbdbdb;
+}
+
+.container .slides .item:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100%;
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #00000073, #ffffff00);
+  background: linear-gradient(to right, #00000073, #ffffff00);
+}
+
+.container .slides .item {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 200px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px #5050507c;
+  transition: 0.5s cubic-bezier(0.29, 0.66, 0.43, 1);
+}
+
+.slides .item:nth-child(1),
+.slides .item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slides .item:nth-child(3) {
+  left: 50%;
+}
+.slides .item:nth-child(4) {
+  left: calc(50% + 220px);
+}
+.slides .item:nth-child(5) {
+  left: calc(50% + calc(220px * 2));
+}
+.slides .item:nth-child(n + 6) {
+  left: calc(50% + calc(220px * 3));
+  opacity: 0;
+}
+
+.item .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translate(0, -50%);
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  color: #eee;
+}
+
+.slides .item:nth-child(2) .content {
+  display: flex;
+}
+
+.content .name {
+  font-size: 40px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .desc {
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button {
+  cursor: pointer;
+  padding: 8px 20px;
+  width: fit-content;
+  background: #eee;
+  font-weight: 600;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.navigation button {
+  cursor: pointer;
+  width: 40px;
+  height: 35px;
+  background: #eee;
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+  line-height: 35px;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navigation button:hover {
+  background: #b9b9b9;
+  color: #fff;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+    filter: blur(0);
+  }
+}
