@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --light: #f7f7f8;
+  --dark: #181818;
+  --paragraph: #aaaaaa;
+}
+
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+.category_container {
+  --p-inline-category_container: 6rem;
+  --w-category_container: 45rem;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 8rem;
+
+  padding: 2.5rem var(--p-inline-category_container);
+
+  width: var(--w-category_container);
+  height: fit-content;
+  background-color: var(--light);
+
+  border: none;
+  border-radius: 0.5rem;
+
+  box-shadow: 0 0 0.25rem 0 hsla(0, 0%, 9%, 0.15);
+}
+
+.category_container span {
+  display: block;
+
+  margin-bottom: 0.25rem;
+
+  font-size: 0.75rem;
+  color: var(--paragraph);
+}
+
+.category_container h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.info-card {
+  text-align: right;
+}
+
+.card_container {
+  --w-card_container: calc(var(--w-category_container) - calc(var(--p-inline-category_container) * 2));
+
+  display: flex;
+
+  width: var(--w-card_container);
+  height: fit-content;
+}
+
+.card {
+  --w-card: 10rem;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  padding: 1rem;
+  margin-right: calc((var(--w-card_container) - (var(--w-card) * 4)) / 3);
+
+  width: var(--w-card);
+  height: fit-content;
+  box-sizing: border-box;
+  background-color: white;
+
+  border-radius: 0.5rem;
+
+  transform-origin: top center;
+  box-shadow: 0 0 0.25rem 0 hsl(0, 0%, 9%, 0.1);
+  transition: all 0.1s ease-in-out;
+}
+.card:nth-child(1) {
+  transform: rotate(-8deg);
+}
+.card:nth-child(2) {
+  transform: rotate(8deg) translateY(0.5rem);
+}
+.card:nth-child(3) {
+  transform: rotate(-8deg);
+}
+.card:nth-child(4) {
+  transform: rotate(8deg);
+}
+
+.card:hover {
+  transform: rotate(0) translateY(-3rem);
+}
+
+.card .card-icon {
+  display: block;
+
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  margin-inline: auto;
+
+  height: 5rem;
+}
