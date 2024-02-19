@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  --dark: #020617;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100dvh;
+  /* background: var(--dark); */
+}
+
+.card_container {
+  --rotateX: 0deg;
+  --rotateY: 0deg;
+  --rotateZ: 0deg;
+
+  position: relative;
+}
+
+.card {
+  --light: #d9d9d9;
+  --dark: #1f1f1f;
+
+  overflow: hidden;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.75rem;
+
+  padding: 1.5rem;
+  width: 15rem;
+  aspect-ratio: 5.5 / 3.5;
+  background: rgb(142, 65, 223);
+  background: linear-gradient(135deg, rgba(142, 65, 223, 1) 0%, rgba(129, 50, 184, 1) 50%, rgba(113, 20, 163, 1) 100%);
+
+  border-radius: 0.5rem;
+
+  transform-origin: center;
+  transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) rotateZ(var(--rotateZ));
+  box-shadow: 0 0 0.25rem #2b2b2b;
+  transition: transform 0.3s ease;
+}
+
+.card_container:hover .card {
+  cursor: none;
+  --opacity: 1;
+}
+
+.content_container {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 0;
+
+  display: grid;
+  grid-template-columns: repeat(var(--column-grid), 1fr);
+  grid-template-rows: repeat(var(--row-grid), 1fr);
+
+  width: 100%;
+  height: 100%;
+}
+
+.rectangle {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: #7fe5ff;
+
+  opacity: var(--opacity, 0);
+  transform: scale(0);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.icon_container {
+  position: relative;
+
+  width: 100%;
+  background-color: transparent;
+}
+
+.icon_container svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 2.5rem;
+  fill: var(--light);
+}
+
+.title {
+  overflow: clip;
+
+  width: 100%;
+
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--light);
+  text-transform: capitalize;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+
+.paragraph {
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: var(--light);
+}
