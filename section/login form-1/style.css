@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  --dark: #181818;
+
+  overflow: clip;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100dvh;
+  /* background-color: var(--dark); */
+  background-color: hsla(166, 42%, 65%, 1);
+  background-image: radial-gradient(at 76% 100%, hsla(289, 74%, 89%, 1) 0px, transparent 50%), radial-gradient(at 100% 59%, hsla(300, 64%, 80%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 67%, hsla(286, 34%, 92%, 1) 0px, transparent 50%), radial-gradient(at 31% 2%, hsla(283, 100%, 92%, 1) 0px, transparent 50%);
+}
+
+.form {
+  --light: #d9d9d9;
+  --primary: #46658f;
+
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+  padding: 1rem;
+  min-width: 18rem;
+  background-color: hsla(0, 0%, 100%, 0.1);
+
+  backdrop-filter: blur(0.25rem);
+  border: 0.125rem solid var(--light);
+  border-radius: 1.5rem;
+}
+
+.input_cont {
+  grid-column: span 2;
+
+  position: relative;
+
+  width: 100%;
+
+  opacity: var(--opacity, 0.7);
+  /* filter: grayscale(var(--grayscale, 0.5)); */
+  transition: opacity 0.1s ease-in-out;
+}
+.input_cont:has(.input:focus) {
+  /* --grayscale: 0; */
+  --opacity: 1;
+}
+
+.icon {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 0.75rem;
+  transform: translate(0%, -50%);
+
+  width: 1.25rem;
+  fill: var(--primary);
+}
+
+.input {
+  padding-block: 1rem;
+  padding-inline: calc((0.75rem * 2) + 1.25rem) 0.75rem;
+
+  width: 100%;
+  height: fit-content;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  background-color: transparent;
+
+  font-size: 0.75rem;
+  color: var(--primary);
+
+  border: 1px solid var(--light);
+  border-radius: 0.5rem;
+  outline: none;
+
+  backdrop-filter: blur(0.25rem);
+  box-shadow: inset 0 0 0.125rem 0.125rem var(--light), 0 0.25rem 0.5rem hsla(0, 0%, 0%, 0.1);
+}
+.input::placeholder {
+  color: var(--primary);
+}
+
+.btn {
+  cursor: pointer;
+
+  padding: 0.75rem 0.5rem;
+
+  background-color: hsla(0, 0%, 100%, 0.1);
+
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--primary);
+
+  border: 1px solid var(--light);
+  border-radius: 0.5rem;
+  outline: none;
+
+  backdrop-filter: blur(0.25rem);
+  box-shadow: inset 0 0 0.125rem 0.125rem var(--light), 0 0.25rem 0.5rem hsla(0, 0%, 0%, 0.1);
+}
+.btn:hover {
+  --opacity: 1;
+}
+
+.btn_cancel {
+  opacity: var(--opacity, 0.7);
+}
+
+.btn_submit {
+  background-color: hsla(166, 42%, 65%, 1);
+  background-image: radial-gradient(at 85% 26%, hsla(280, 72%, 95%, 1) 0px, transparent 60%), radial-gradient(at 56% 87%, hsla(280, 72%, 95%, 1) 0px, transparent 60%), radial-gradient(at 93% 92%, hsla(300, 85%, 76%, 1) 0px, transparent 60%);
+
+  box-shadow: 0 0.25rem 0.5rem hsla(0, 0%, 0%, 0.1);
+}
