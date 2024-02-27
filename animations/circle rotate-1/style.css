@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --light: #fdfdfd;
+  --dark: #0b1215;
+  --primary: #00401c;
+}
+
+.blank_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100dvh;
+}
+
+.blank_section button {
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  background-color: #0c0c0c;
+
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+
+  border-radius: 0.5rem;
+}
+
+.header {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100dvh;
+}
+
+.circle_container {
+  position: relative;
+}
+
+.currency_container {
+  --rotate_from: 0deg;
+
+  position: relative;
+
+  rotate: var(--rotate_from);
+  transition: all 0.5s linear;
+}
+
+@keyframes rotate {
+  to {
+    rotate: calc(1turn + var(--rotate_from));
+  }
+}
+
+.currency-item_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 25rem;
+
+  transform-origin: 0% 0%;
+  rotate: calc(var(--rotate) * 1deg);
+  transform: translate(-50%, -50%);
+}
+
+.currency-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--light);
+
+  font-size: 1.25rem;
+  color: var(--dark);
+
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+
+  rotate: calc((var(--rotate) * -1deg) + (var(--rotate_from) + (var(--rotate_from) * -2)));
+}
+
+@keyframes rotate_item {
+  to {
+    rotate: calc(((var(--rotate) * -1deg) + (var(--rotate_from) + (var(--rotate_from) * -2))) + -360deg);
+  }
+}
+
+.profile_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+
+  border-radius: 50%;
+}
+
+.profile_container svg {
+  width: 12.5rem;
+}
