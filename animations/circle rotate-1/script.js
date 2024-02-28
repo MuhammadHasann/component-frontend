@@ -5,6 +5,7 @@ let isScrolling = false;
 let oldScroll = 0;
 let oldDirection = "normal";
 let durationAnimation = 10;
+let currentTransformRotation = 0;
 
 const setAnimation = (element, direction) => {
   element.style.animation = `rotate_item ${durationAnimation}s linear ${direction} infinite`;
@@ -38,8 +39,13 @@ window.addEventListener("load", () => {
 window.addEventListener("scroll", () => {
   if (!isScrolling) {
     isScrolling = true;
+
     setTimeout(() => {
       updateAnimation();
+
+      currentTransformRotation += oldDirection === "reverse" ? -30 : 30;
+      currencyContainer.style.setProperty("--rotate_transform", `${currentTransformRotation}deg`);
+
       isScrolling = false;
     }, 100);
   }
