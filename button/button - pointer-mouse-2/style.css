@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --primary: #7469b6;
+  --second: #ad88c6;
+  --light: #ffe6e6;
+}
+
+.container {
+  --bg-color: #0c0c0c;
+
+  overflow: clip;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100dvh;
+  background-color: var(--bg-color);
+}
+
+.button {
+  --padding-block: 1.5rem;
+  --padding-inline: 2.5rem;
+
+  overflow: clip;
+
+  cursor: pointer;
+
+  position: relative;
+  z-index: 10;
+
+  width: calc(var(--text__width_button) + (var(--padding-inline) * 2));
+  height: calc(var(--text__height_button) + (var(--padding-block) * 2));
+  background-color: var(--primary);
+
+  border: none;
+  border-radius: 9999px;
+  transform: translate(var(--pointerX), var(--pointerY));
+
+  transition: transform 0.3s linear;
+}
+.button::before {
+  pointer-events: none;
+
+  content: "";
+
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  width: 110%;
+  aspect-ratio: 1;
+  background-color: var(--second);
+
+  opacity: 0.4;
+  border-radius: 50%;
+  transition: bottom 0.5s ease-in-out, border-radius 0.5s ease-in-out 0.1s, transform 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+
+  transition: bottom 0s ease-in-out, border-radius 0s ease-in-out, transform 0s ease-in-out;
+}
+
+.text_button {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--light);
+  text-wrap: nowrap;
+}
+
+.text_button:nth-child(1) {
+  animation: text_bottom-center 0.3s ease-in-out forwards;
+}
+.text_button:nth-child(2) {
+  animation: text_center-top 0.3s ease-in-out forwards;
+}
+
+.button:hover .text_button:nth-child(1) {
+  animation: text_center-top 0.3s ease-in-out forwards;
+}
+.button:hover .text_button:nth-child(2) {
+  animation: text_bottom-center 0.3s ease-in-out forwards;
+}
+
+@keyframes text_center-top {
+  from {
+    top: 50%;
+
+    opacity: 1;
+  }
+  to {
+    top: 25%;
+
+    opacity: 0;
+  }
+}
+
+@keyframes text_bottom-center {
+  from {
+    top: 75%;
+
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+
+    opacity: 1;
+  }
+}
+
+/* .parent {
+  position: relative;
+
+  width: 50px;
+  height: 50px;
+}
+
+.parent::before {
+  content: '';
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  width: 20px;
+  height: 20px;
+} */
