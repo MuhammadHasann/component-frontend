@@ -1,10 +1,12 @@
-const contents = document.querySelectorAll(".content");
+// No Javascript
 
-contents.forEach((element) => {
-  window.addEventListener("load", () => {
-    const paragraphQuote = element.querySelector(".profile_quote");
-    const height = paragraphQuote.clientHeight;
+// const contents = document.querySelectorAll(".content");
 
-    element.style.setProperty("--height_paragraph-quote", `${height}px`);
-  });
-});
+// contents.forEach((element) => {
+//   window.addEventListener("load", () => {
+//     const paragraphQuote = element.querySelector(".profile_quote");
+//     const height = paragraphQuote.clientHeight;
+
+//     element.style.setProperty("--height_paragraph-quote", `${height}px`);
+//   });
+// });

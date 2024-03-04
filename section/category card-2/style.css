@@ -47,6 +47,7 @@ body {
 
 .content {
   --active: 0;
+  --templateRows: 0fr;
 
   cursor: pointer;
   overflow: clip;
@@ -70,6 +71,7 @@ body {
 }
 .content:hover {
   --active: 1;
+  --templateRows: 1fr;
 
   width: calc(70% - var(--gap));
 }
@@ -114,9 +116,9 @@ body {
 
   width: 12rem;
 
-  transform: translate(0, calc((1 - var(--active)) * (var(--height_paragraph-quote) + 1.5rem)));
+  transform: translate(0, calc((1 - var(--active)) * 1.5rem));
 
-  transition: transform 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
+  transition: transform 0.5s cubic-bezier(0.23, 0.93, 0.77, 1);
 }
 
 .profile_detail span {
@@ -133,17 +135,21 @@ body {
 }
 
 .profile_quote {
-  width: 22rem;
+  overflow: clip;
 
-  transform: translate(0, calc((1 - var(--active)) * (100% + 2.5rem)));
+  display: grid;
+  grid-template-rows: var(--templateRows);
+
+  width: 22rem;
+  height: fit-content;
+
+  transition: grid-template-rows 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.1s;
 }
 
 .profile_quote p {
+  min-height: 0;
+
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--light);
-
-  transform: translate(0, calc((1 - var(--active)) * (100% + 2.5rem)));
-
-  transition: transform 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.1s;
 }
