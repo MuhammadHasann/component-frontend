@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --text: #f1f1f1;
+  --light: #ffe6e6;
+  --dark: #0c0c0c;
+  --border: #3d3d3d;
+  --shadow-light: #9e9e9e;
+  --shadow: #0a0a0a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  --bg-color: radial-gradient(circle at 50% 0%, rgba(50, 50, 50, 1) 0%, rgba(12, 12, 12, 1) 100%);
+
+  overflow: clip;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem 5rem;
+
+  width: 100%;
+  height: 100dvh;
+  background-image: var(--bg-color);
+}
+
+.card_container {
+  --size: 5rem;
+  --gap: 1rem;
+  --card-total: 5;
+
+  overflow-x: scroll;
+
+  padding-block: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+
+  width: calc((var(--card-total) * (var(--size) + var(--gap))) - var(--gap));
+
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: var(--size);
+  min-height: var(--size);
+  background-color: var(--dark);
+  aspect-ratio: 1;
+
+  border-radius: 0.75rem;
+
+  opacity: 0.5;
+  transform: scale(0.5);
+  box-shadow: inset 0 0.175rem 0.25rem var(--shadow-light), 0 0.25rem 0.5rem var(--shadow);
+
+  scroll-snap-align: start;
+
+  animation-name: scroll-in, scroll-out;
+  animation-fill-mode: forwards;
+  animation-timeline: view(inline);
+  animation-range: entry, exit;
+}
+
+@keyframes scroll-in {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scroll-out {
+  to {
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+}
+
+.card i {
+  display: inline-block;
+
+  background-image: linear-gradient(90deg, rgba(207, 207, 207, 1) 0%, rgba(241, 241, 241, 1) 50%);
+  background-clip: text;
+
+  font-size: 2rem;
+  font-weight: 600;
+  color: transparent;
+}
+
+.card_container::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+.card_container::-webkit-scrollbar-track {
+  background-color: transparent;
+
+  border: 1px solid var(--light);
+  border-radius: 9999px;
+}
+
+.card_container::-webkit-scrollbar-thumb {
+  cursor: grab;
+
+  background-color: var(--light);
+
+  border-radius: 9999px;
+}
+.card_container::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+
+  background-color: var(--shadow-light);
+}
