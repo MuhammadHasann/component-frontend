@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Schuss News Pro';
+    src: url('SchussNewsPro-Heavy.eot');
+    src: local('Schuss News Pro Heavy'), local('SchussNewsPro-Heavy'),
+        url('SchussNewsPro-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('SchussNewsPro-Heavy.woff2') format('woff2'),
+        url('SchussNewsPro-Heavy.woff') format('woff'),
+        url('SchussNewsPro-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Schuss News Pro';
+    src: url('SchussNewsPro-Italic.eot');
+    src: local('Schuss News Pro Italic'), local('SchussNewsPro-Italic'),
+        url('SchussNewsPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('SchussNewsPro-Italic.woff2') format('woff2'),
+        url('SchussNewsPro-Italic.woff') format('woff'),
+        url('SchussNewsPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Schuss News Pro';
+    src: url('SchussNewsPro-Medium.eot');
+    src: local('Schuss News Pro Medium'), local('SchussNewsPro-Medium'),
+        url('SchussNewsPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('SchussNewsPro-Medium.woff2') format('woff2'),
+        url('SchussNewsPro-Medium.woff') format('woff'),
+        url('SchussNewsPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Schuss News Pro';
+    src: url('SchussNewsPro-Light.eot');
+    src: local('Schuss News Pro Light'), local('SchussNewsPro-Light'),
+        url('SchussNewsPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('SchussNewsPro-Light.woff2') format('woff2'),
+        url('SchussNewsPro-Light.woff') format('woff'),
+        url('SchussNewsPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Schuss News Pro';
+    src: url('SchussNewsPro-HeavyItalic.eot');
+    src: local('Schuss News Pro Heavy Italic'), local('SchussNewsPro-HeavyItalic'),
+        url('SchussNewsPro-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('SchussNewsPro-HeavyItalic.woff2') format('woff2'),
+        url('SchussNewsPro-HeavyItalic.woff') format('woff'),
+        url('SchussNewsPro-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Schuss News Pro';
+    src: url('SchussNewsPro-Bold.eot');
+    src: local('Schuss News Pro Bold'), local('SchussNewsPro-Bold'),
+        url('SchussNewsPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('SchussNewsPro-Bold.woff2') format('woff2'),
+        url('SchussNewsPro-Bold.woff') format('woff'),
+        url('SchussNewsPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Schuss News Pro';
+    src: url('SchussNewsPro-BoldItalic.eot');
+    src: local('Schuss News Pro Bold Italic'), local('SchussNewsPro-BoldItalic'),
+        url('SchussNewsPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('SchussNewsPro-BoldItalic.woff2') format('woff2'),
+        url('SchussNewsPro-BoldItalic.woff') format('woff'),
+        url('SchussNewsPro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Schuss News Pro';
+    src: url('SchussNewsPro-LightItalic.eot');
+    src: local('Schuss News Pro Light Italic'), local('SchussNewsPro-LightItalic'),
+        url('SchussNewsPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('SchussNewsPro-LightItalic.woff2') format('woff2'),
+        url('SchussNewsPro-LightItalic.woff') format('woff'),
+        url('SchussNewsPro-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Schuss News Pro';
+    src: url('SchussNewsPro-MediumItalic.eot');
+    src: local('Schuss News Pro Medium Italic'), local('SchussNewsPro-MediumItalic'),
+        url('SchussNewsPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('SchussNewsPro-MediumItalic.woff2') format('woff2'),
+        url('SchussNewsPro-MediumItalic.woff') format('woff'),
+        url('SchussNewsPro-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Schuss News Pro';
+    src: url('SchussNewsPro-Regular.eot');
+    src: local('Schuss News Pro Regular'), local('SchussNewsPro-Regular'),
+        url('SchussNewsPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SchussNewsPro-Regular.woff2') format('woff2'),
+        url('SchussNewsPro-Regular.woff') format('woff'),
+        url('SchussNewsPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

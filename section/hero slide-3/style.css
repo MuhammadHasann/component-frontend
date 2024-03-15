@@ -1,0 +1,262 @@
+@font-face {
+  font-family: "Schuss News Pro";
+  src: url("fonts/Schuss News Pro/SchussNewsPro-Heavy.eot");
+  src: url("fonts/Schuss News Pro/SchussNewsPro-Heavy.woff2") format("woff2"), url("fonts/Schuss News Pro/SchussNewsPro-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Neue Montreal";
+}
+
+.header {
+  z-index: 2;
+}
+
+.sub-tittle {
+  z-index: 1;
+}
+
+/* Body Header 1 */
+.body-header {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-green {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#1a3028, #181818);
+  z-index: -10;
+}
+
+.bg-red {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#5a1512, #ac5858);
+  z-index: -9;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin: auto;
+  width: 84.5%;
+  height: auto;
+}
+
+.navbar-logo h1 {
+  font-size: 38px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 75px;
+  list-style: none;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.navbar-user {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  gap: 10px;
+}
+
+.navbar-user .circle {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.navbar-user img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 70px;
+  width: 100%;
+  height: 100vh;
+}
+
+.header .text {
+  width: 90%;
+  height: 100%;
+}
+
+.header .text h1 {
+  font-size: 68px;
+  font-weight: 900;
+  font-family: "Schuss News Pro";
+  color: #fff;
+}
+
+.header .text p {
+  font-size: 18px;
+  color: #fff;
+  text-align: justify;
+}
+
+.header .text span {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #fff;
+}
+
+.header .text button {
+  margin-top: 20px;
+  padding: 15px 25px;
+  background-color: #f3ef00;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+}
+
+.header .product {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "arrow-left product arrow-right";
+  margin-left: auto;
+  width: 90%;
+  height: 100%;
+}
+
+.header .product .arrow-left {
+  place-self: center end;
+  grid-area: arrow-left;
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background-color: #ffffff3d;
+}
+
+.header .product .arrow-right {
+  place-self: center start;
+  grid-area: arrow-right;
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background-color: #ffffff3d;
+}
+
+.header .product i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  color: #fff;
+}
+
+.header .product .image {
+  place-self: center;
+  grid-area: product;
+  position: relative;
+  margin: auto;
+  background: linear-gradient(#fffc66, #f39e00);
+  width: 300px;
+  height: 500px;
+  border-radius: 250px;
+  z-index: 2;
+}
+
+.header .product .image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 225px;
+  height: auto;
+}
+
+.svg {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  padding: 12px;
+  width: 125px;
+  height: 125px;
+  background-color: #ffffff50;
+  border-radius: 50%;
+  transform: rotate(10deg);
+  transition: all 1s ease-in-out;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  font-variant: normal;
+  font-style: normal;
+  font-weight: bold;
+  src: url("#FontID0") format(svg);
+}
+
+.fil1 {
+  fill: black;
+}
+.fil0 {
+  fill: black;
+}
+.fnt0 {
+  font-weight: bold;
+  font-size: 205.99px;
+  font-family: "Neue Montreal";
+}
+
+.sub-tittle {
+  position: absolute;
+  bottom: -10%;
+  right: 0;
+  width: 50%;
+  height: auto;
+}
+
+.sub-tittle h1 {
+  font-size: 200px;
+  font-weight: 900;
+  font-family: "Schuss News Pro";
+  color: #ffffff50;
+}
