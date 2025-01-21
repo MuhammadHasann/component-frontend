@@ -59,6 +59,21 @@ ul::before {
 
   opacity: 1;
 } */
+ul:has(li:nth-child(1):hover)::before {
+  background-color: #f9c02252;
+}
+ul:has(li:nth-child(2):hover)::before {
+  background-color: #38f92252;
+}
+ul:has(li:nth-child(3):hover)::before {
+  background-color: #22f9f552;
+}
+ul:has(li:nth-child(4):hover)::before {
+  background-color: #f922eb52;
+}
+ul:has(li:nth-child(5):hover)::before {
+  background-color: #2234f952;
+}
 
 li {
   cursor: pointer;
