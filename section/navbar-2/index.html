@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="menu-item">
+          <button class="menu-button" onclick="handleClick(event, this)">
+            overview
+          </button>
+        </li>
+        <li class="menu-item">
+          <button class="menu-button" onclick="handleClick(event, this)">
+            integrations
+          </button>
+        </li>
+        <li class="menu-item">
+          <button class="menu-button" onclick="handleClick(event, this)">
+            activity
+          </button>
+        </li>
+        <li class="menu-item">
+          <button class="menu-button" onclick="handleClick(event, this)">
+            domains
+          </button>
+        </li>
+        <li class="menu-item">
+          <button class="menu-button" onclick="handleClick(event, this)">
+            usage
+          </button>
+        </li>
+        <li class="menu-item">
+          <button class="menu-button" onclick="handleClick(event, this)">
+            AI
+          </button>
+        </li>
+        <li class="menu-item">
+          <button class="menu-button" onclick="handleClick(event, this)">
+            settings
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <script>
+      const handleClick = (event, element) => {
+        const menuItems = document.querySelectorAll(".menu-button");
+
+        menuItems.forEach((item) => item.classList.remove("active"));
+
+        element.classList.add("active");
+      };
+    </script>
+  </body>
+</html>
