@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --background: #fff;
+  --foreground: #191c27;
+  --secondary: #d4d4d4;
+  --secondary-foreground: #4a4b4d;
+  --rounded-full: 9999px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100svw;
+  height: 100svh;
+}
+
+button:is(:hover, :focus-visible) {
+  background: color-mix(in lch, var(--bg), currentColor 15%);
+
+  span:first-of-type {
+    pointer-events: none;
+    translate: 0 var(--y, 1lh);
+    transition: translate 0.875s
+      linear(
+        0 0%,
+        0.1751 2.03%,
+        0.753 7.31%,
+        1.0016 10.02%,
+        1.1875 13.07%,
+        1.2407 14.61%,
+        1.2692 16.21%,
+        1.2745 17.08%,
+        1.2732 17.98%,
+        1.251 19.94%,
+        1.2062 22.03%,
+        1.0633 27.25%,
+        1.0019 29.9%,
+        0.9553 32.87%,
+        0.9415 34.36%,
+        0.9336 35.9%,
+        0.9315 37.8%,
+        0.9371 39.9%,
+        0.9988 49.76%,
+        1.0104 52.63%,
+        1.0163 55.53%,
+        1.0158 59.87%,
+        1.0006 69.51%,
+        0.9961 74.86%,
+        1 100%
+      );
+  }
+}
+
+button {
+  --bg: canvasText;
+
+  cursor: pointer;
+
+  overflow: hidden;
+  position: relative;
+
+  background: var(--bg);
+
+  border: 1px solid color-mix(in lch, canvas, canvasText);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+
+  transition: background 0.2s;
+
+  &:has(span:nth-of-type(2):hover):not(:focus-visible) {
+    --y: 1lh;
+  }
+  &:has(span:nth-of-type(3):hover):not(:focus-visible) {
+    --y: -1lh;
+  }
+}
+span:not(:first-of-type) {
+  position: absolute;
+  z-index: 10;
+
+  inset: 0;
+
+  &:hover {
+    clip-path: inset(0 0 0 0);
+    z-index: 999;
+  }
+}
+
+span {
+  font-size: 1.25rem;
+  color: canvas;
+  text-transform: capitalize;
+
+  &:nth-of-type(2) {
+    clip-path: inset(0 0 50% 0);
+  }
+  &:nth-of-type(3) {
+    clip-path: inset(50% 0 0 0);
+  }
+}
+
+button span:first-of-type {
+  display: inline-block;
+
+  padding: 0 2rem;
+
+  line-height: 2;
+  text-shadow: 0 -1lh currentColor, 0 1lh currentCOlor;
+}
+
+button::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  border: 1px solid hsl(0 0% 25%);
+  border-radius: 6px;
+}
+
+button:nth-of-type(2) {
+  --bg: canvas;
+  color: canvasText;
+}
